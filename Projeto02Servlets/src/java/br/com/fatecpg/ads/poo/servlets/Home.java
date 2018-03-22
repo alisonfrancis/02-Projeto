@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author user
  */
-@WebServlet(name = "Home", urlPatterns = {"/Home.html"})
+@WebServlet(name = "Home", urlPatterns = {"/home.html"})
 public class Home extends HttpServlet {
 
     /**
@@ -42,10 +42,11 @@ public class Home extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Home at " + request.getContextPath() + "</h1>");
+            out.println("<img src=\"Imagens/juros.png\">");
             
             /* Link da pagina Home */
-            out.println("<h2><a href=JurosSimples.html>Juros Simples</a></h2>");
-            out.println("<h2><a href=JurosComposto.html>Juros Composto</a></h2>");            
+            out.println("<h2><a href=jurossimples.html>Juros Simples</a></h2>");
+            out.println("<h2><a href=juroscomposto.html>Juros Composto</a></h2>");            
             /* Fim do link da pagina Home */
             
             out.println("</body>");
