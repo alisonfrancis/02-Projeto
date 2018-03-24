@@ -61,6 +61,7 @@ public class JurosSimples extends HttpServlet {
     
             out.println("</head>");
             out.println("<body class='p'>");
+            
     /*--- NAVBAR ---*/
             out.println("<div class=\"pos-f-t\">\n" +
                         "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
@@ -87,7 +88,7 @@ public class JurosSimples extends HttpServlet {
                         "      <span class=\"navbar-toggler-icon\"></span>\n" +
                         "    </button>\n" +"  </nav>\n" +
                         "</div>");
-    /*--- Fim NAVBAR ---*/
+   /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
 
@@ -123,21 +124,21 @@ public class JurosSimples extends HttpServlet {
                         "</div>");
             /* Card*/
             /* Variavel para jurus simples */
-            Double c,i,n,mo;
+            /*Double c,i,n,mo;*/
             
             /* converte tipo texto para inteiro */
             
-            c = Double.parseDouble(request.getParameter("c"));
+           /* c = Double.parseDouble(request.getParameter("c"));
              i = Double.parseDouble(request.getParameter("i"));
-              n = Double.parseDouble(request.getParameter("n"));
+              n = Double.parseDouble(request.getParameter("n"));*/
               
             /* Calcular Montante */
-            i=(i/100);
-            mo = c*(1+(i*n));
+           /* i=(i/100);
+            mo = c*(1+(i*n));*/
             
             /* Exibir o Resultado*/
-           out.println(mo);
-            
+          /* out.println(mo);*/
+        
 /* FIM DO CONTEUDO */
                         
     /*---- Footer-----------*/
