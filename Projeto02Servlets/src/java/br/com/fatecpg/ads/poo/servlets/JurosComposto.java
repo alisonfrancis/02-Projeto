@@ -60,7 +60,7 @@ public class JurosComposto extends HttpServlet {
     /*---Fim do FAVICON --- */ 
             
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body class='p'>");
             
     /*--- NAVBAR ---*/
             out.println("<div class=\"pos-f-t\">\n" +

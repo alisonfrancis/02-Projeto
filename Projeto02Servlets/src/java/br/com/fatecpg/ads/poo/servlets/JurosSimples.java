@@ -60,7 +60,7 @@ public class JurosSimples extends HttpServlet {
     /* ------ Fim Fonts -----*/
     
             out.println("</head>");
-            out.println("<body>");
+            out.println("<body class='p'>");
     /*--- NAVBAR ---*/
             out.println("<div class=\"pos-f-t\">\n" +
                         "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
@@ -91,11 +91,52 @@ public class JurosSimples extends HttpServlet {
     
 /* INICIO DO CONTEUDO */
 
-            out.println("<h1>Servlet JurosSimples at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Juros Simples </h1>");
             
-            /* Link da pagina Home */
-            out.println("<h2><a href=home.html>HOME</a></h2>");            
-            /* Fim do link da pagina Home */
+
+            /* Card*/
+            out.println("<div class=\"card text-center\">\n" +
+                        "  <div class=\"card-header\">\n" +
+                        "    Featured\n" +
+                        "  </div>\n" +
+                        "  <div class=\"card-body\">\n" +
+                        "    <h5 class=\"card-title\">Regime de Capitalização</h5>\n" +
+                        "    <p class=\"card-text\">Insira a baixo os valores para realizar o calculo do montante.</p>\n" +
+                                /* Form*/
+                        "<form>\n" +
+                        "  <div class=\"form-row\">\n" +
+                        "    <div class=\"col-4\">\n" +
+                        "      <input type=\"text\" name='c'class=\"form-control\" placeholder=\"Capital\">\n" +
+                        "    </div>\n" +
+                        "    <div class=\"col-4\">\n" +
+                        "      <input type=\"text\" name='i' class=\"form-control\" placeholder=\"Juros\">\n" +
+                        "    </div>\n" +
+                        "    <div class=\"col-4\">\n" +
+                        "      <input type=\"text\" name='n' class=\"form-control\" placeholder=\"Meses\">\n" +
+                        "    </div>\n" +
+                        "  </div>\n" +
+                        "</form>"+"<br>"+
+            /* Fim Form*/
+            
+                        "    <a href=\"#\" class=\"btn btn-primary\">Calcular</a>\n" +
+                        "  </div>\n" +
+                        "</div>");
+            /* Card*/
+            /* Variavel para jurus simples */
+            Double c,i,n,mo;
+            
+            /* converte tipo texto para inteiro */
+            
+            c = Double.parseDouble(request.getParameter("c"));
+             i = Double.parseDouble(request.getParameter("i"));
+              n = Double.parseDouble(request.getParameter("n"));
+              
+            /* Calcular Montante */
+            i=(i/100);
+            mo = c*(1+(i*n));
+            
+            /* Exibir o Resultado*/
+           out.println(mo);
             
 /* FIM DO CONTEUDO */
                         
