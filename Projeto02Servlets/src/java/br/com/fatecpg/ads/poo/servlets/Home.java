@@ -45,7 +45,7 @@ public class Home extends HttpServlet {
     /* Fim Style Test */       
             
             out.println("<head>");
-            out.println("<title>CONTinf</title>"); 
+            out.println("<title>Aplicacao Juros</title>"); 
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
            
     /* ---- CSS ------ */
@@ -93,33 +93,26 @@ public class Home extends HttpServlet {
     /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
-out.println("<div class=\"card-deck\">\n" +
-"  <div class=\"card\">\n" +
-"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
-"    <div class=\"card-body\">\n" +
-"      <h5 class=\"card-title\">Card title</h5>\n" +
-"      <p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n" +
-"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
-"    </div>\n" +
-"  </div>\n" +
-"  <div class=\"card\">\n" +
-"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
-"    <div class=\"card-body\">\n" +
-"      <h5 class=\"card-title\">Card title</h5>\n" +
-"      <p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>\n" +
-"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
-"    </div>\n" +
-"  </div>\n" +
-"  <div class=\"card\">\n" +
-"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
-"    <div class=\"card-body\">\n" +
-"      <h5 class=\"card-title\">Card title</h5>\n" +
-"      <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n" +
-"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
-"    </div>\n" +
-"  </div>\n" +
-"</div>");
+out.println("<div class=\"titulo\" align =middle> \n <br>" +
+   "O que são Juros ? <br><br>" +
+        "</div>");
+        
+out.println("<div class=\"conteudo\" align =left font = Arial  >" +
 
+"Juros é a remuneração cobrada pelo empréstimo de dinheiro (ou outro item). É expresso como um percentual sobre o valor emprestado (taxa de juro) e pode ser calculado de duas formas: juros simples ou juros compostos.\n" +
+"\n" +
+"O juro pode ser compreendido como uma espécie de \"aluguel sobre o dinheiro\". A taxa seria uma compensação paga pelo tomador do empréstimo para ter o direito de usar o dinheiro até o dia do pagamento. O credor, por outro lado, recebe uma compensação por não poder usar esse dinheiro até o dia do pagamento e por correr o risco de não receber o dinheiro de volta (risco de inadimplência)."+
+ "<img src=\"Imagens/juros.png\" width = 100 height = 200 align = right>"
+        +        "<br>&emsp; A equipe composta pelos integrantes <ul>"
+       
+        
+        + "<li>João Paulo</li>"
+        + "<li>Alisson Francisco</li><br>"
+        + "Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir <br>"+
+        "<a href=\"jurossimples.html\">Calcule Juros Simples Aqui!</a>"+
+        "&emsp;<a href=\"juroscomposto.html\">Calcule Juros Composto Aqui!</a>"+
+        
+        "</div>");
 out.println("");
 /* FIM DO CONTEUDO */
 
