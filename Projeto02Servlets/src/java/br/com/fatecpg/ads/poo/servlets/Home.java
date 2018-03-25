@@ -40,7 +40,7 @@ public class Home extends HttpServlet {
     /* Style Test */
             out.println("<style>.p{font-family: 'Orbitron', sans-serif;}</style>");
             out.println("<style>.p2{font-family: 'Advent Pro', sans-serif;}</style>");
-            out.println("<style>.fim {\n" +"    position:static;\n" +"    bottom:0;\n" +"    width:100%;\n" +"}</style>");
+            out.println("<style>.fim {\n" +"    position:absolute;\n" +"    bottom:0;\n" +"    width:100%;\n" +"}</style>");
            
     /* Fim Style Test */       
             
@@ -93,95 +93,34 @@ public class Home extends HttpServlet {
     /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
-
-           
-            out.println("<img src=\"Imagens/Continf.jpg\">");
-           /* out.println("<h1>Servlet Home at " + request.getContextPath() + "</h1>");*/
-            
-        /* Cad Navigation */
-            out.println("<div class=\"card text-center\">\n" +
-                        "  <div class=\"card-header\">\n" +
-                        "    <ul class=\"nav nav-tabs card-header-tabs\">\n" +
-                        "      <li class=\"nav-item\">\n" +
-                        "        <a class=\"nav-link active\" href=\"#\">Calcule</a>\n" +
-                        "      </li>\n" +
-                        "      <li class=\"nav-item\">\n" +
-                        "        <a class=\"nav-link \" href=\"#\">Equipe</a>\n" +
-                        "      </li>\n" +
-                        "      <li class=\"nav-item\">\n" +
-                        "        <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n" +
-                        "      </li>\n" +
-                        "    </ul>\n" +
-                        "  </div>\n" +
-                        "  <div class=\"card-body\">\n" +
-                        "    <h5 class=\"card-title\">Selecione uma das Opções</h5>\n" +
-                        "    <p class=\"card-text\">Escolha uma da opção para calcular os juros.</p>\n" +
-                        "    <a href=\"jurossimples.html\" class=\"btn btn-primary\">Juros Simples</a>\n" +"    <a href=\"juroscomposto.html\" class=\"btn btn-primary\">Juros Composto</a>\n"+
-                        "  </div>\n" +
-                        "</div>");
-        /*Fim do Cad Navigation*/
-        
-        /* Test Carroucel*/
-        out.println("<div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
-"  <ol class=\"carousel-indicators\">\n" +
-"    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n" +
-"    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\n" +
-"    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\n" +
-"  </ol>\n" +
-"  <div class=\"carousel-inner\">\n" +
-"    <div class=\"carousel-item active\">\n" +/*test cad*/"<div class=\"card\">\n"+
-"  <div class=\"card-header\">\n"+
-"    Calculo\n"+
-"  </div>\n"+
-"  <div class=\"card-body\">\n"+
-"    <blockquote class=\"blockquote mb-0\">\n"+
-"      <p>Onde aparecera dois botões</p>\n"+"    <a href=\"jurossimples.html\" class=\"btn btn-primary\">Juros Simples</a>\n" +"    <a href=\"juroscomposto.html\" class=\"btn btn-primary\">Juros Composto</a>\n"+
-"      <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n"+
-"    </blockquote>\n"+
-"  </div>\n"+
-"</div>\n"+/*fim cad*/
-"\n"+     
-"    </div>\n" +
-"    <div class=\"carousel-item\">\n" +/*test cad*/"<div class=\"card\">\n"+
-"  <div class=\"card-header\">\n"+
-"   Equipe\n"+
-"  </div>\n"+
-"  <div class=\"card-body \">\n"+
-"    <blockquote class=\"blockquote mb-0\">\n"+
-"      <p>Acrescentar dois cards.</p>\n"+
-"      <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n"+
-"    </blockquote>\n"+
-"  </div>\n"+
-"</div>\n"+/*fim cad*/
-"\n"+
-"    </div>\n" +
-"    <div class=\"carousel-item\">\n" +/*test cad*/"<div class=\"card\">\n"+
-"  <div class=\"card-header\">\n"+
-"    Defini\n"+
-"  </div>\n"+
-"  <div class=\"card-body\">\n"+
-"    <blockquote class=\"blockquote mb-0\">\n"+
-"      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n"+
-"      <footer class=\"blockquote-footer\">Someone famous in <cite title=\"Source Title\">Source Title</cite></footer>\n"+
-"    </blockquote>\n"+
-"  </div>\n"+
-"</div>\n"+/*fim cad*/
-"\n"+
+out.println("<div class=\"card-deck\">\n" +
+"  <div class=\"card\">\n" +
+"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
+"    <div class=\"card-body\">\n" +
+"      <h5 class=\"card-title\">Card title</h5>\n" +
+"      <p class=\"card-text\">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n" +
+"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
 "    </div>\n" +
 "  </div>\n" +
-"  <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n" +
-"    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n" +
-"    <span class=\"sr-only\">Previous</span>\n" +
-"  </a>\n" +
-"  <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n" +
-"    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n" +
-"    <span class=\"sr-only\">Next</span>\n" +
-"  </a>\n" +
+"  <div class=\"card\">\n" +
+"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
+"    <div class=\"card-body\">\n" +
+"      <h5 class=\"card-title\">Card title</h5>\n" +
+"      <p class=\"card-text\">This card has supporting text below as a natural lead-in to additional content.</p>\n" +
+"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+"    </div>\n" +
+"  </div>\n" +
+"  <div class=\"card\">\n" +
+"    <img class=\"card-img-top\" src=\"Imagens/Semfoto.png\" alt=\"Card image cap\">\n" +
+"    <div class=\"card-body\">\n" +
+"      <h5 class=\"card-title\">Card title</h5>\n" +
+"      <p class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n" +
+"      <p class=\"card-text\"><small class=\"text-muted\">Last updated 3 mins ago</small></p>\n" +
+"    </div>\n" +
+"  </div>\n" +
 "</div>");
-        /* Fim Test Carroucel*/
-            
- 
-    
+
+out.println("");
 /* FIM DO CONTEUDO */
 
     /*---- Footer-----------*/

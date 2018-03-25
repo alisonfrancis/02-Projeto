@@ -46,6 +46,7 @@ public class JurosSimples extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet JurosSimples</title>");
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
+ 
     /* ---- CSS ------ */
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
     /* ----Fim CSS ------- */
@@ -103,7 +104,7 @@ public class JurosSimples extends HttpServlet {
                         "  <div class=\"card-body\">\n" +
                         "    <h5 class=\"card-title\">Regime de Capitalização</h5>\n" +
                         "    <p class=\"card-text\">Insira a baixo os valores para realizar o calculo do montante.</p>\n" +
-                                /* Form*/
+            /* Form*/
                         "<form>\n" +
                         "  <div class=\"form-row\">\n" +
                         "    <div class=\"col-4\">\n" +
@@ -119,26 +120,34 @@ public class JurosSimples extends HttpServlet {
                         "</form>"+"<br>"+
             /* Fim Form*/
             
-                        "    <a href=\"#\" class=\"btn btn-primary\">Calcular</a>\n" +
+                        "    <button onClick class=\"btn btn-primary\">Calcular</button>\n" +
                         "  </div>\n" +
-                        "</div>");
-            /* Card*/
+                        "</div>");            
+            /* Fim Card*/
+            try{
             /* Variavel para jurus simples */
-            /*Double c,i,n,mo;*/
+            Double c,i,n,mo;
             
             /* converte tipo texto para inteiro */
             
-           /* c = Double.parseDouble(request.getParameter("c"));
+            c = Double.parseDouble(request.getParameter("c"));
              i = Double.parseDouble(request.getParameter("i"));
-              n = Double.parseDouble(request.getParameter("n"));*/
+              n = Double.parseDouble(request.getParameter("n"));
               
             /* Calcular Montante */
-           /* i=(i/100);
-            mo = c*(1+(i*n));*/
+            i=(i/100);
+            mo = c*(1+(i*n));
             
             /* Exibir o Resultado*/
-          /* out.println(mo);*/
-        
+              
+            }catch(Exception ex){
+                out.println("<center>");
+             
+                    out.println("ENTRA COM VALOR VALIDO ");
+                out.println("</center>");
+            
+            }
+            
 /* FIM DO CONTEUDO */
                         
     /*---- Footer-----------*/

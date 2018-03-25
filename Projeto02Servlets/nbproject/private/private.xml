@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/JoãoPaulo/Documents/NetBeansProjects/Projeto-02-master/Projeto-02-master/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/JurosSimples.java</file>
-            <file>file:/C:/Users/JoãoPaulo/Documents/NetBeansProjects/Projeto-02-master/Projeto-02-master/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/Home.java</file>
-            <file>file:/C:/Users/JoãoPaulo/Documents/NetBeansProjects/Projeto-02-master/Projeto-02-master/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/JurosComposto.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Projeto-02/Projeto02Servlets/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Projeto-02/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/Home.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Projeto-02/Projeto02Servlets/web/index.html</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Projeto-02/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/JurosComposto.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Projeto-02/Projeto02Servlets/src/java/br/com/fatecpg/ads/poo/servlets/JurosSimples.java</file>
         </group>
     </open-files>
 </project-private>
