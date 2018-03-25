@@ -44,7 +44,7 @@ public class JurosComposto extends HttpServlet {
     /* Fim Style Test */  
             
             out.println("<head>");
-            out.println("<title>Servlet JurosComposto</title>");
+            out.println("<title>Juros Composto</title>");
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
             /* ---- CSS ------ */
             out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">");
@@ -83,6 +83,8 @@ public class JurosComposto extends HttpServlet {
                         +"</li>\n"
                         +"</ul>\n"+
                         "  </div>\n" +/* fim dos botoes*/
+                     
+                        
                         "  <nav class=\"navbar navbar-dark bg-dark\">\n" +
                         "    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggleExternalContent\" aria-controls=\"navbarToggleExternalContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
                         "      <span class=\"navbar-toggler-icon\"></span>\n" +
@@ -92,10 +94,35 @@ public class JurosComposto extends HttpServlet {
    
 /* INICIO DO CONTEUDO */
 
-            out.println("<h1>Servlet JurosComposto at " + request.getContextPath() + "</h1>");
+            out.println("<h1>JurosComposto</h1>");
+            out.println("<form>");
+            out.println("\nCapital: ");
+            out.println("<input type = text name =capital>");
+            out.println("\nJuros: ");
+            out.println("<input type = text name =juros>");
+            out.println("\nMeses: ");
+            out.println("<input type = text name =m>");
+            out.println("<input type = submit value = Calcular>");
+             out.println("<br><a href=home.html>Voltar</a>");  
+            out.println("</form>");
+            
+            try {
+            int meses = Integer.parseInt(request.getParameter("meses"));
+             out.println("<table border ='1'>");
+            out.println("<tr><th>Indice </th><th>Número</th></tr>");
+            for (int i=1 ; i<=meses ; i++)
+            {
+            int v = (int)(Math.random()*100);
+            out.println("<tr><th>" + i+"</th><td>"+v+"</td></tr>");
+            
+            }
+            }
+            
+            catch(Exception e){
+            }
             
             /* Link da pagina Home */
-            out.println("<h2><a href=home.html>HOME</a></h2>");            
+                     
             /* Fim do link da pagina Home */
 /* FIM DO CONTEUDO */
             

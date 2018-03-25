@@ -44,7 +44,7 @@ public class JurosSimples extends HttpServlet {
     /* Fim Style Test */  
     
             out.println("<head>");
-            out.println("<title>Servlet JurosSimples</title>");
+            out.println("<title>Juros Simples</title>");
             out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">");
  
     /* ---- CSS ------ */
@@ -121,6 +121,8 @@ public class JurosSimples extends HttpServlet {
             /* Fim Form*/
             
                         "    <button onClick class=\"btn btn-primary\">Calcular</button>\n" +
+                     "<br><a href=\"home.html\">Voltar</a>"+
+       
                         "  </div>\n" +
                         "</div>");            
             /* Fim Card*/
