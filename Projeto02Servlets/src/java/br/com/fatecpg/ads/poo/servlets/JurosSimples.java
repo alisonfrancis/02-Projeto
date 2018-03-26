@@ -93,62 +93,54 @@ public class JurosSimples extends HttpServlet {
     
 /* INICIO DO CONTEUDO */
 
-            out.println("<h1>Juros Simples </h1>");
+            out.println("<h1>Juros Simples </h1><br><hr>");
             
 
-            /* Card*/
-            out.println("<div class=\"card text-center\">\n" +
-                        "  <div class=\"card-header\">\n" +
-                        "    Featured\n" +
-                        "  </div>\n" +
-                        "  <div class=\"card-body\">\n" +
-                        "    <h5 class=\"card-title\">Regime de Capitalização</h5>\n" +
-                        "    <p class=\"card-text\">Insira a baixo os valores para realizar o calculo do montante.</p>\n" +
-            /* Form*/
-                        "<form>\n" +
-                        "  <div class=\"form-row\">\n" +
-                        "    <div class=\"col-4\">\n" +
-                        "      <input type=\"text\" name='c'class=\"form-control\" placeholder=\"Capital\">\n" +
-                        "    </div>\n" +
-                        "    <div class=\"col-4\">\n" +
-                        "      <input type=\"text\" name='i' class=\"form-control\" placeholder=\"Juros\">\n" +
-                        "    </div>\n" +
-                        "    <div class=\"col-4\">\n" +
-                        "      <input type=\"text\" name='n' class=\"form-control\" placeholder=\"Meses\">\n" +
-                        "    </div>\n" +
-                        "  </div>\n" +
-                        "</form>"+"<br>"+
-            /* Fim Form*/
-            
-                        "    <button onClick class=\"btn btn-primary\">Calcular</button>\n" +
-                     "<br><a href=\"home.html\">Voltar</a>"+
-       
-                        "  </div>\n" +
-                        "</div>");            
-            /* Fim Card*/
-            try{
-            /* Variavel para jurus simples */
-            Double c,i,n,mo;
-            
-            /* converte tipo texto para inteiro */
+            out.println("<center>");
+            out.println("<form>");
+            out.println("<P> Digite os valores no campo abaixo:</p>");
+            out.println("<table>");
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"c\" placeholder=\"Volor Capital\"></td></tr>");
+           
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"i\" placeholder=\"Taxa juros\"></td></tr>");
+           
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"n\" placeholder=\"em meses\"></td></tr>");
+            out.println("</table>");
+            out.println("<br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular\"></td></tr>");
+              
+            out.println("</form>");
+            out.print("</center>");
+            out.println("<hr>");
+            try {
+           
+              /* Variavel para jurus simples */
+            Double c,i,Mo;
+            int n;
+            /* converte tipo texto para numerico */
             
             c = Double.parseDouble(request.getParameter("c"));
              i = Double.parseDouble(request.getParameter("i"));
-              n = Double.parseDouble(request.getParameter("n"));
+              n = Integer.parseInt(request.getParameter("n"));
               
             /* Calcular Montante */
             i=(i/100);
-            mo = c*(1+(i*n));
+            Mo = c*(1+(i*n));
             
             /* Exibir o Resultado*/
-              
-            }catch(Exception ex){
-                out.println("<center>");
-             
+             out.print("<center><h2>");
+            out.println(" O montante é: "+Mo);
+             out.print("</center></h2>");
+            }
+  
+            catch(Exception ex){
+                
+                out.println("<center>");             
                     out.println("ENTRA COM VALOR VALIDO ");
                 out.println("</center>");
-            
+                
             }
+          
+            
             
 /* FIM DO CONTEUDO */
                         

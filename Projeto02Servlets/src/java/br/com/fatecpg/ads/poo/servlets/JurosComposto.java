@@ -7,6 +7,7 @@ package br.com.fatecpg.ads.poo.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -94,31 +95,58 @@ public class JurosComposto extends HttpServlet {
    
 /* INICIO DO CONTEUDO */
 
-            out.println("<h1>JurosComposto</h1>");
+            out.println("<h1>JurosComposto</h1><br><hr>");
+            
+             out.println("<center>");
             out.println("<form>");
-            out.println("\nCapital: ");
-            out.println("<input type = text name =capital>");
-            out.println("\nJuros: ");
-            out.println("<input type = text name =juros>");
-            out.println("\nMeses: ");
-            out.println("<input type = text name =m>");
-            out.println("<input type = submit value = Calcular>");
-             out.println("<br><a href=home.html>Voltar</a>");  
+            out.println("<table>");
+            out.println("<P> Digite os valores no campo abaixo:</p>");
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"c\" placeholder=\"Volor Capital\"></td></tr>");
+           
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"i\" placeholder=\"Taxa juros\"></td></tr>");
+           
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"n\" placeholder=\"em meses\"></td></tr>");
+            out.println("</table>");
+            out.println("<br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular\"></td></tr>");
+              
             out.println("</form>");
+            out.print("</center>");
+            out.println("<hr>");
             
             try {
-            int meses = Integer.parseInt(request.getParameter("meses"));
-             out.println("<table border ='1'>");
-            out.println("<tr><th>Indice </th><th>Número</th></tr>");
-            for (int i=1 ; i<=meses ; i++)
-            {
-            int v = (int)(Math.random()*100);
-            out.println("<tr><th>" + i+"</th><td>"+v+"</td></tr>");
-            
-            }
+                 /* Variavel para jurus composto */
+                Double c,i,Moc;
+                int n;
+                
+                /* converte tipo texto para numerico */
+                
+                c = Double.parseDouble(request.getParameter("c"));
+                  i = Double.parseDouble(request.getParameter("i"));
+                     n = Integer.parseInt(request.getParameter("n"));
+                     
+                 /*Colocando duas casa */    
+               DecimalFormat df = new DecimalFormat("0.##");
+             
+                
+               out.println("<center><h2>");
+                    out.println("<table border='1'>");
+                    out.println("<tr><th>Mês</th><th>Montante acumulado R$</th></tr>");
+                    out.println("<tr><th>0</th><td>" + c + "</td></tr>");
+                    for (int cont = 1; cont <= n; cont++){
+                        Moc = c * Math.pow((1 + (i / 100)), cont);
+                        /* convertendo o valor para duas casa*/
+                        String Mof = df.format(Moc);
+                        out.println("<tr><th>" + cont + "</th><td>" +Mof+ "</td></tr>");
+                    }
+                    out.println("</table>");
+              out.println("</center></h2>");
             }
             
             catch(Exception e){
+                
+                  out.println("<center>");             
+                    out.println("ENTRA COM VALOR VALIDO ");
+                out.println("</center>");
             }
             
             /* Link da pagina Home */
