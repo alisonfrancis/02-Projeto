@@ -68,7 +68,7 @@ public class JurosComposto extends HttpServlet {
                         "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
                         "    <div class=\"bg-dark p-4\">\n" +
                         "      <h4 class=\"text-white\">CONTinf</h4>\n" +
-                        "      <span class=\"text-muted\">Toggleable via the navbar brand.</span>\n" +
+                        "      <span class=\"text-muted\">Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir .</span>\n" +
                         "    </div>\n"/* Botoes da navbar*/ +"<ul class=\"nav nav-tabs navbar-dark bg-dark\">\n"
                         +" <li class=\"nav-item\">\n"
                         +"  <a class=\"nav-link active\" href=\"home.html\">HOME</a>\n"
@@ -79,9 +79,7 @@ public class JurosComposto extends HttpServlet {
                         +"<li class=\"nav-item\">\n"
                         +" <a class=\"nav-link text-white\" href=\"juroscomposto.html\">Juros Composto</a>\n"
                         +"</li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n"
-                        +"</li>\n"
+                        
                         +"</ul>\n"+
                         "  </div>\n" +/* fim dos botoes*/
                      
@@ -95,7 +93,7 @@ public class JurosComposto extends HttpServlet {
    
 /* INICIO DO CONTEUDO */
 
-            out.println("<h1>JurosComposto</h1><br><hr>");
+            out.println("<h1>Juros Composto</h1><br><hr>");
             
              out.println("<center>");
             out.println("<form>");

@@ -69,7 +69,7 @@ public class Home extends HttpServlet {
                         "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
                         "    <div class=\"bg-dark p-4\">\n" +
                         "      <h4 class=\"text-white\">CONTinf</h4>\n" +
-                        "      <span class=\"text-muted\">Toggleable via the navbar brand.</span>\n" +
+                        "      <span class=\"text-muted\">Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir .</span>\n" +
                         "    </div>\n"/* Botoes da navbar*/ +"<ul class=\"nav nav-tabs navbar-dark bg-dark\">\n"
                         +" <li class=\"nav-item\">\n"
                         +"  <a class=\"nav-link active\" href=\"home.html\">HOME</a>\n"
@@ -80,9 +80,7 @@ public class Home extends HttpServlet {
                         +"<li class=\"nav-item\">\n"
                         +" <a class=\"nav-link text-white\" href=\"juroscomposto.html\">Juros Composto</a>\n"
                         +"</li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n"
-                        +"</li>\n"
+                        
                         +"</ul>\n"+
                         "  </div>\n" +/* fim dos botoes*/
                         "  <nav class=\"navbar navbar-dark bg-dark\">\n" +
@@ -93,37 +91,59 @@ public class Home extends HttpServlet {
     /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
-out.println("<div class=\"titulo\" align =middle> \n <br>" +
-   "O que são Juros ? <br><br>" +
-        "</div>");
-        
-out.println("<div class=\"conteudo\" align =left font = Arial  >" +
 
-"Juros é a remuneração cobrada pelo empréstimo de dinheiro (ou outro item). É expresso como um percentual sobre o valor emprestado (taxa de juro) e pode ser calculado de duas formas: juros simples ou juros compostos.\n" +
-"\n" +
-"O juro pode ser compreendido como uma espécie de \"aluguel sobre o dinheiro\". A taxa seria uma compensação paga pelo tomador do empréstimo para ter o direito de usar o dinheiro até o dia do pagamento. O credor, por outro lado, recebe uma compensação por não poder usar esse dinheiro até o dia do pagamento e por correr o risco de não receber o dinheiro de volta (risco de inadimplência)."+
- "<img src=\"Imagens/juros.png\" width = 100 height = 200 align = right>"
-        +        "<br>&emsp; A equipe composta pelos integrantes <ul>"
-       
         
-        + "<li>João Paulo</li>"
-        + "<li>Alisson Francisco</li><br>"
-        + "Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir <br>"+
-        "<a href=\"jurossimples.html\">Calcule Juros Simples Aqui!</a>"+
-        "&emsp;<a href=\"juroscomposto.html\">Calcule Juros Composto Aqui!</a>"+
-        
-        "</div>");
-out.println("");
+out.println("<div class=\"card\">\n" +
+            "  <div class=\"card-header\">\n<h2>" +
+            "   O que são Juros ?\n" +
+            "  </h2></div>\n" +
+            "  <div class=\"card-body\">\n" +
+            
+            "    <p class=\"card-text\">Juros é a remuneração cobrada pelo empréstimo de dinheiro "
+        + "(ou outro item). É expresso como um percentual sobre o valor emprestado (taxa de juro) e "
+        + "pode ser calculado de duas formas: juros simples ou juros compostos.O juro pode ser compreendido como uma "
+        + "espécie de \"aluguel sobre o dinheiro\". A taxa seria uma compensação paga "
+        + "pelo tomador do empréstimo para ter o direito de usar o dinheiro até o dia do"
+        + " pagamento. O credor, por outro lado, recebe uma compensação por não poder usar "
+        + "esse dinheiro até o dia do pagamento e por correr o risco de não receber o dinheiro "
+        + "de volta (risco de inadimplência).</p>\n" +
+        "    <h5 class=\"card-title\">Calcule agora seu juros</h5>\n" +
+            "    <a href=\"jurossimples.html\" class=\"btn btn-primary\">Juros simples</a>\n" +
+        "    <a href=\"juroscomposto.html\" class=\"btn btn-primary\">Juros Composto</a>\n" +
+            "  </div>\n" +
+            "</div><br>");
+out.println(" <h3> Desenvolvido por:</h3>");
+out.println("<div class=\"row\">\n" +
+"  <div class=\"col-sm-6\">\n" +
+"    <div class=\"card\">\n" +
+"      <div class=\"card-body\">\n" +
+"        <h5 class=\"card-title\">Alison Francisco</h5>\n" +
+"        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
+
+"        <a href=\"https://github.com/alisonfrancis\" class=\"btn btn-primary\">Github</a>\n" +
+"      </div>\n" +
+"    </div>\n" +
+"  </div>\n" +
+"  <div class=\"col-sm-6\">\n" +
+"    <div class=\"card\">\n" +
+"      <div class=\"card-body\">\n" +
+"        <h5 class=\"card-title\">João Paulo Duarte</h5>\n" +
+"        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
+"        <a href=\"#\" class=\"btn btn-primary\">Github</a>\n" +
+"      </div>\n" +
+"    </div>\n" +
+"  </div>\n" +
+"</div>");
 /* FIM DO CONTEUDO */
 
     /*---- Footer-----------*/
             out.println("<footer class=\"text-muted bg-dark fim\">\n" +
                         "<div class=\"container\">\n" +
                         "<p class=\"float-right \">\n" +
-                        "<a class=\"text-white href=\"#\">Back to top</a>\n" +
+                    
                         "</p>\n" +
                         "<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>\n" +
-                        "<p>New to Bootstrap? <a class=\"text-white href=\"../../\">Visit the homepage</a> or read our <a class=\"text-white href=\"../../getting-started/\">getting started guide</a>.</p>\n" +
+                        "<p>New to Bootstrap? <a class=\"text-white href=\">@test</a></p>\n" +
                         "</div>\n" +
                         "</footer>");
     /* --- Fim do Footer------*/

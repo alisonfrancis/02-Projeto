@@ -7,6 +7,7 @@ package br.com.fatecpg.ads.poo.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormat;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -68,7 +69,7 @@ public class JurosSimples extends HttpServlet {
                         "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
                         "    <div class=\"bg-dark p-4\">\n" +
                         "      <h4 class=\"text-white\">CONTinf</h4>\n" +
-                        "      <span class=\"text-muted\">Toggleable via the navbar brand.</span>\n" +
+                        "      <span class=\"text-muted\">Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir .</span>\n" +
                         "    </div>\n"/* Botoes da navbar*/ +"<ul class=\"nav nav-tabs navbar-dark bg-dark\">\n"
                         +" <li class=\"nav-item\">\n"
                         +"  <a class=\"nav-link active\" href=\"home.html\">HOME</a>\n"
@@ -79,9 +80,7 @@ public class JurosSimples extends HttpServlet {
                         +"<li class=\"nav-item\">\n"
                         +" <a class=\"nav-link text-white\" href=\"juroscomposto.html\">Juros Composto</a>\n"
                         +"</li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link disabled\" href=\"#\">Disabled</a>\n"
-                        +"</li>\n"
+                       
                         +"</ul>\n"+
                         "  </div>\n" +/* fim dos botoes*/
                         "  <nav class=\"navbar navbar-dark bg-dark\">\n" +
@@ -104,7 +103,7 @@ public class JurosSimples extends HttpServlet {
            
             out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"i\" placeholder=\"Taxa juros\"></td></tr>");
            
-            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"n\" placeholder=\"em meses\"></td></tr>");
+            out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"n\" placeholder=\"Meses\"></td></tr>");
             out.println("</table>");
             out.println("<br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular\"></td></tr>");
               
@@ -114,7 +113,7 @@ public class JurosSimples extends HttpServlet {
             try {
            
               /* Variavel para jurus simples */
-            Double c,i,Mo;
+            Double c,i,r,Mo;
             int n;
             /* converte tipo texto para numerico */
             
@@ -122,14 +121,26 @@ public class JurosSimples extends HttpServlet {
              i = Double.parseDouble(request.getParameter("i"));
               n = Integer.parseInt(request.getParameter("n"));
               
+                     /*Colocando duas casa */    
+               DecimalFormat df = new DecimalFormat("0.##");
             /* Calcular Montante */
-            i=(i/100);
-            Mo = c*(1+(i*n));
+            r=(i/100);
+            Mo = c*(1+(r*n));
+            /* convertendo o valor para duas casa*/
+                        String Mof = df.format(Mo);
             
             /* Exibir o Resultado*/
-             out.print("<center><h2>");
-            out.println(" O montante é: "+Mo);
-             out.print("</center></h2>");
+             out.print("<center>");
+             out.println("<div class=\"card\" style=\"width: 18rem;\">\n" +
+                        "  <div class=\"card-header\">\n" +
+                        "    Montante\n" +
+                        "  </div>\n" +
+                        "  <ul class=\"Valores inseridos\">\n" +Mof+" R$\n"+
+                        
+                        "  </ul>\n" +
+                        "</div>");
+           
+             out.print("</center>");
             }
   
             catch(Exception ex){
