@@ -156,7 +156,7 @@ public class JurosSimples extends HttpServlet {
 /* FIM DO CONTEUDO */
                         
     /*---- Footer-----------*/
-            out.println("<footer class=\"text-muted bg-dark fim\">\n" +
+      /*      out.println("<footer class=\"text-muted bg-dark fim\">\n" +
                         "<div class=\"container\">\n" +
                         "<p class=\"float-right \">\n" +
                         "<a class=\"text-white href=\"#\">Back to top</a>\n" +

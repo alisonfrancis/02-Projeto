@@ -117,8 +117,8 @@ out.println("<div class=\"row\">\n" +
 "  <div class=\"col-sm-6\">\n" +
 "    <div class=\"card\">\n" +
 "      <div class=\"card-body\">\n" +
-"        <h5 class=\"card-title\">Alison Francisco</h5>\n" +
-"        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
+"        <h5 class=\"card-title\">Alison Francisco</h5>\n" +/*
+"        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" + */
 
 "        <a href=\"https://github.com/alisonfrancis\" class=\"btn btn-primary\">Github</a>\n" +
 "      </div>\n" +
@@ -127,9 +127,9 @@ out.println("<div class=\"row\">\n" +
 "  <div class=\"col-sm-6\">\n" +
 "    <div class=\"card\">\n" +
 "      <div class=\"card-body\">\n" +
-"        <h5 class=\"card-title\">João Paulo Duarte</h5>\n" +
-"        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" +
-"        <a href=\"#\" class=\"btn btn-primary\">Github</a>\n" +
+"        <h5 class=\"card-title\">João Paulo Duarte</h5>\n" +/*
+"        /*<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" + */
+"        <a href=\"https://github.com/10joaopaulo\" class=\"btn btn-primary\">Github</a>\n" +
 "      </div>\n" +
 "    </div>\n" +
 "  </div>\n" +
@@ -137,7 +137,7 @@ out.println("<div class=\"row\">\n" +
 /* FIM DO CONTEUDO */
 
     /*---- Footer-----------*/
-            out.println("<footer class=\"text-muted bg-dark fim\">\n" +
+          /*APAGAR AQUI CASO FOR IMPLEMENTAR  out.println("<footer class=\"text-muted bg-dark fim\">\n" +
                         "<div class=\"container\">\n" +
                         "<p class=\"float-right \">\n" +
                     
