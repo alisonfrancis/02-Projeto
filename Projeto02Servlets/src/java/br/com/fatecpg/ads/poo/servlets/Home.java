@@ -38,9 +38,9 @@ public class Home extends HttpServlet {
             out.println("<html>");
             
     /* Style Test */
-            out.println("<style>.p{font-family: 'Orbitron', sans-serif;}</style>");
-            out.println("<style>.p2{font-family: 'Advent Pro', sans-serif;}</style>");
-            out.println("<style>.fim {\n" +"    position:absolute;\n" +"    bottom:0;\n" +"    width:100%;\n" +"}</style>");
+            out.println("<style>.p{font-family: 'Raleway', sans-serif;}</style>");
+           
+            
            
     /* Fim Style Test */       
             
@@ -53,63 +53,62 @@ public class Home extends HttpServlet {
     /* ----Fim CSS ------- */
     
     /* ------ FAVICON -----*/
-            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon.png\" />");
+            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon6.png\" />");
     /*---Fim do FAVICON --- */
     
     /* ---- Google Fonts ----*/
-            out.println("<link href=\"https://fonts.googleapis.com/css?family=Orbitron\" rel=\"stylesheet\">");
-            out.println("<link href=\"https://fonts.googleapis.com/css?family=Advent+Pro\" rel=\"stylesheet\"> ");
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=Raleway\" rel=\"stylesheet\"> ");
+           
     /* ------ Fim Fonts -----*/
     
             out.println("</head>");
-            out.println("<body class='p'>");
+            out.println("<body class='p' >");
             
      /*--- NAVBAR ---*/
-            out.println("<div class=\"pos-f-t\">\n" +
-                        "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
-                        "    <div class=\"bg-dark p-4\">\n" +
-                        "      <h4 class=\"text-white\">CONTinf</h4>\n" +
-                        "      <span class=\"text-muted\">Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir .</span>\n" +
-                        "    </div>\n"/* Botoes da navbar*/ +"<ul class=\"nav nav-tabs navbar-dark bg-dark\">\n"
-                        +" <li class=\"nav-item\">\n"
-                        +"  <a class=\"nav-link active\" href=\"home.html\">HOME</a>\n"
-                        +"</li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link text-white\" href=\"jurossimples.html\">Juros Simples</a>\n"
-                        +" </li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link text-white\" href=\"juroscomposto.html\">Juros Composto</a>\n"
-                        +"</li>\n"
-                        
-                        +"</ul>\n"+
-                        "  </div>\n" +/* fim dos botoes*/
-                        "  <nav class=\"navbar navbar-dark bg-dark\">\n" +
-                        "    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggleExternalContent\" aria-controls=\"navbarToggleExternalContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
-                        "      <span class=\"navbar-toggler-icon\"></span>\n" +
-                        "    </button>\n" + "  </nav>\n" +
-                        "</div>");
+            out.println(  /*Botoes da navbar*/"<br><ul class=\"nav nav-tabs \">\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link active\" href=\"home.html\">Continf</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"home.html\">Home</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"jurossimples.html\">Juros Simples</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"juroscomposto.html\">Juros Composto</a>\n" +
+"  </li>\n" +
+"</ul>" /* fim dos botoes*/
+                       );
     /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
 
-        
+       out.println("<div class=\"card bg-dark \">\n" +
+"  <img class=\"card-img\" src=\"Imagens/investment1.png\" alt=\"Card image\">\n" +
+"  <div class=\"card-img-overlay\">\n" +
+"    <b><h4 class=\"card-title\">Regime de Capitalização</h4>\n" +
+"    <p class=\"card-text\">Calcule seus Juros Simples e Composto.</p></b>\n" +
+   
+"  </div>\n" +
+"</div>");
 out.println("<div class=\"card\">\n" +
             "  <div class=\"card-header\">\n<h2>" +
             "   O que são Juros ?\n" +
             "  </h2></div>\n" +
             "  <div class=\"card-body\">\n" +
             
-            "    <p class=\"card-text\">Juros é a remuneração cobrada pelo empréstimo de dinheiro "
+            "    <h5><p class=\"card-text \">Juros é a remuneração cobrada pelo empréstimo de dinheiro "
         + "(ou outro item). É expresso como um percentual sobre o valor emprestado (taxa de juro) e "
         + "pode ser calculado de duas formas: juros simples ou juros compostos.O juro pode ser compreendido como uma "
         + "espécie de \"aluguel sobre o dinheiro\". A taxa seria uma compensação paga "
         + "pelo tomador do empréstimo para ter o direito de usar o dinheiro até o dia do"
         + " pagamento. O credor, por outro lado, recebe uma compensação por não poder usar "
         + "esse dinheiro até o dia do pagamento e por correr o risco de não receber o dinheiro "
-        + "de volta (risco de inadimplência).</p>\n" +
+        + "de volta (risco de inadimplência).</p></h5>\n" +
         "    <h5 class=\"card-title\">Calcule agora seu juros</h5>\n" +
-            "    <a href=\"jurossimples.html\" class=\"btn btn-primary\">Juros simples</a>\n" +
-        "    <a href=\"juroscomposto.html\" class=\"btn btn-primary\">Juros Composto</a>\n" +
+            "    <br><a href=\"jurossimples.html\" class=\"btn btn-secondary\">Juros simples</a>\n" +
+        "    <a href=\"juroscomposto.html\" class=\"btn btn-secondary\">Juros Composto</a>\n" +
             "  </div>\n" +
             "</div><br>");
 out.println(" <h3> Desenvolvido por:</h3>");
@@ -120,7 +119,7 @@ out.println("<div class=\"row\">\n" +
 "        <h5 class=\"card-title\">Alison Francisco</h5>\n" +/*
 "        <p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" + */
 
-"        <a href=\"https://github.com/alisonfrancis\" class=\"btn btn-primary\">Github</a>\n" +
+"        <a href=\"https://github.com/alisonfrancis\" class=\"btn btn-secondary\">Github</a>\n" +
 "      </div>\n" +
 "    </div>\n" +
 "  </div>\n" +
@@ -129,7 +128,7 @@ out.println("<div class=\"row\">\n" +
 "      <div class=\"card-body\">\n" +
 "        <h5 class=\"card-title\">João Paulo Duarte</h5>\n" +/*
 "        /*<p class=\"card-text\">With supporting text below as a natural lead-in to additional content.</p>\n" + */
-"        <a href=\"https://github.com/10joaopaulo\" class=\"btn btn-primary\">Github</a>\n" +
+"        <a href=\"https://github.com/10joaopaulo\" class=\"btn btn-secondary\">Github</a>\n" +
 "      </div>\n" +
 "    </div>\n" +
 "  </div>\n" +

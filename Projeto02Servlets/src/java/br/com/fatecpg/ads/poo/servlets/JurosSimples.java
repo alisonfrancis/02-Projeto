@@ -39,9 +39,9 @@ public class JurosSimples extends HttpServlet {
             out.println("<html>");
             
     /* Style Test */
-            out.println("<style>.p{font-family: 'Orbitron', sans-serif;}</style>");
-            out.println("<style>.p2{font-family: 'Advent Pro', sans-serif;}</style>");
-            out.println("<style>.fim {\n" +"    position:absolute;\n" +"    bottom:0;\n" +"    width:100%;\n" +"}</style>");
+            out.println("<style>.p{font-family: 'Raleway', sans-serif;}</style>");
+            
+          
     /* Fim Style Test */  
     
             out.println("<head>");
@@ -53,7 +53,7 @@ public class JurosSimples extends HttpServlet {
     /* ----Fim CSS ------- */
     
     /* ------ FAVICON -----*/
-            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon.png\" />");
+            out.println("<link rel=\"shortcut icon\" href=\"Imagens/favicon6.png\" />");
     /*---Fim do FAVICON --- */
     
     /* ---- Google Fonts ----*/
@@ -65,34 +65,28 @@ public class JurosSimples extends HttpServlet {
             out.println("<body class='p'>");
             
     /*--- NAVBAR ---*/
-            out.println("<div class=\"pos-f-t\">\n" +
-                        "  <div class=\"collapse\" id=\"navbarToggleExternalContent\">\n" +
-                        "    <div class=\"bg-dark p-4\">\n" +
-                        "      <h4 class=\"text-white\">CONTinf</h4>\n" +
-                        "      <span class=\"text-muted\">Já preparou uma página para calcular os respectivos juros pra você! Confira nos links a seguir .</span>\n" +
-                        "    </div>\n"/* Botoes da navbar*/ +"<ul class=\"nav nav-tabs navbar-dark bg-dark\">\n"
-                        +" <li class=\"nav-item\">\n"
-                        +"  <a class=\"nav-link active\" href=\"home.html\">HOME</a>\n"
-                        +"</li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link text-white\" href=\"jurossimples.html\">Juros Simples</a>\n"
-                        +" </li>\n"
-                        +"<li class=\"nav-item\">\n"
-                        +" <a class=\"nav-link text-white\" href=\"juroscomposto.html\">Juros Composto</a>\n"
-                        +"</li>\n"
-                       
-                        +"</ul>\n"+
-                        "  </div>\n" +/* fim dos botoes*/
-                        "  <nav class=\"navbar navbar-dark bg-dark\">\n" +
-                        "    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarToggleExternalContent\" aria-controls=\"navbarToggleExternalContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
-                        "      <span class=\"navbar-toggler-icon\"></span>\n" +
-                        "    </button>\n" +"  </nav>\n" +
-                        "</div>");
+                  out.println(  /*Botoes da navbar*/"<br><ul class=\"nav nav-tabs \">\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link active\" href=\"home.html\">Continf</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"home.html\">Home</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"jurossimples.html\">Juros Simples</a>\n" +
+"  </li>\n" +
+"  <li class=\"nav-item\">\n" +
+"    <a class=\"nav-link\" href=\"juroscomposto.html\">Juros Composto</a>\n" +
+"  </li>\n" +
+"</ul>" /* fim dos botoes*/
+                       );
    /*--- Fim NAVBAR ---*/
     
 /* INICIO DO CONTEUDO */
-
-            out.println("<h1>Juros Simples </h1><br><hr>");
+            out.println("<div class=\"card\">\n" +
+                    "  <h2 class=\"card-header\">Juros Simples</h2>\n" +
+                    "  <div class=\"card-body\">");
+           
             
 
             out.println("<center>");
@@ -105,10 +99,11 @@ public class JurosSimples extends HttpServlet {
            
             out.println("<tr><td><input class=\"form-control\" type=\"text\" name=\"n\" placeholder=\"Meses\"></td></tr>");
             out.println("</table>");
-            out.println("<br><input class=\"bttbody btn btn-primary\" type=\"submit\" name=\"enviar\" value=\"Calcular\"></td></tr>");
+            out.println("<br><input class=\"bttbody btn btn-secondary\" type=\"submit\" name=\"enviar\" value=\"Calcular\"></td></tr>");
               
             out.println("</form>");
             out.print("</center>");
+            out.println("  </div>\n" +"</div>");
             out.println("<hr>");
             try {
            
@@ -133,11 +128,11 @@ public class JurosSimples extends HttpServlet {
              out.print("<center>");
              out.println("<div class=\"card\" style=\"width: 18rem;\">\n" +
                         "  <div class=\"card-header\">\n" +
-                        "    Montante\n" +
+                        "   Valor do Montante\n" +
                         "  </div>\n" +
-                        "  <ul class=\"Valores inseridos\">\n" +Mof+" R$\n"+
+                        " <h5> <ul class=\"Valores inseridos\">R$: \n" +Mof+
                         
-                        "  </ul>\n" +
+                        "  </ul></h5>\n" +
                         "</div>");
            
              out.print("</center>");
