@@ -151,15 +151,11 @@ public class JurosSimples extends HttpServlet {
 /* FIM DO CONTEUDO */
                         
     /*---- Footer-----------*/
-      /*      out.println("<footer class=\"text-muted bg-dark fim\">\n" +
-                        "<div class=\"container\">\n" +
-                        "<p class=\"float-right \">\n" +
-                        "<a class=\"text-white href=\"#\">Back to top</a>\n" +
-                        "</p>\n" +
-                        "<p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>\n" +
-                        "<p>New to Bootstrap? <a class=\"text-white href=\"../../\">Visit the homepage</a> or read our <a class=\"text-white href=\"../../getting-started/\">getting started guide</a>.</p>\n" +
-                        "</div>\n" +
-                        "</footer>");
+        out.println("<hr><br>\n"+
+       "<footer class=\"container footer-css\">\n"+
+         "   <p class=\"float-right\"><a href=\"#\">Back to top</a></p>\n"+
+          "      <p>&copy; 2018 Fatec, Pg. &middot; <a href=\"https://github.com/alisonfrancis/Projeto-02\">Site do Projeto</a></p>\n"+
+        "</footer>");
     /* --- Fim do Footer------*/
     
     /* ----- JS ------*/
